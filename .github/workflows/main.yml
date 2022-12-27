@@ -20,8 +20,8 @@ jobs:
      - name: Generate config file
        run: |
         cd immortalwrt-mt798x
-        make defconfig
         cp -f defconfig/mt2500.config .config
+        make defconfig        
 
      - name: Build
        run: |
