@@ -28,8 +28,8 @@ jobs:
         cd immortalwrt-mt798x
         make
 
-        - name : Upload artifact
-        uses: actions/upload-artifact@master
-        with:
-        name: OpenWrt
-        path: openwrt/bin
+     - name : Upload artifact
+       uses: actions/upload-artifact@master
+       with:
+         name: OpenWrt
+         path: openwrt/bin
