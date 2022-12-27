@@ -26,7 +26,7 @@ jobs:
      - name: Build
        run: |
         cd immortalwrt-mt798x
-        make -j$(nproc)
+        make
 
         - name : Upload artifact
         uses: actions/upload-artifact@master
