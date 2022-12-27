@@ -19,13 +19,13 @@ jobs:
 
      - name: Generate config file
        run: |
-        cd immortalwrt
+        cd immortalwrt-mt798x
         make defconfig
         cp -f defconfig/mt2500.config .config
 
      - name: Build
        run: |
-        cd immortalwrt
+        cd immortalwrt-mt798x
         make -j$(nproc)
 
         - name : Upload artifact
