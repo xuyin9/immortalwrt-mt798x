@@ -1,0 +1,36 @@
+name: Build OpenWrt mt2500
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+- name: depends
+  run: |
+    sudo bash -c 'bash <(curl -s https://build-scripts.immortalwrt.eu.org/init_build_environment.sh)'
+
+- name: Clone source code
+  run: |
+    git clone https://github.com/zheshifandian/immortalwrt-mt798x
+    cd immortalwrt
+    ./scripts/feeds update -a
+    ./scripts/feeds install -a
+
+- name: Generate config file
+  run: |
+    cd immortalwrt
+    make defconfig
+    cp -f defconfig/mt2500.config .config
+
+- name: Build
+  run: |
+    cd immortalwrt
+    make -j$(nproc)
+
+- name : Upload artifact
+  uses: actions/upload-artifact@master
+  with:
+    name: OpenWrt
+    path: openwrt/bin
