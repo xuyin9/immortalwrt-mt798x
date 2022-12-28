@@ -28,12 +28,12 @@ jobs:
        run: |
         cd immortalwrt-mt798x
         cp -f defconfig/mt2500.config .config
-        make menuconfig
+#        make config
 
      - name: Build
        run: |
         cd immortalwrt-mt798x
-        make
+        make 
 
      - name : Upload artifact
        uses: actions/upload-artifact@master
