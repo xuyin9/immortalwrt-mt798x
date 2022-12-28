@@ -33,7 +33,7 @@ jobs:
      - name: Build
        run: |
         cd immortalwrt-mt798x
-        make v=99
+        make -j8 v=s
 
      - name : Upload artifact
        uses: actions/upload-artifact@master
