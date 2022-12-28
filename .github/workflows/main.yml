@@ -19,7 +19,7 @@ jobs:
 
      - name: Clone source code
        run: |
-         git clone https://github.com/xuyin9/immortalwrt-mt798x
+         git clone https://github.com/zheshifandian/immortalwrt-mt798x
          cd immortalwrt-mt798x
          ./scripts/feeds update -a
          ./scripts/feeds install -a
