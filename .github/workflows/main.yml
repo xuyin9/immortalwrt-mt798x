@@ -14,7 +14,6 @@ jobs:
          git clone -b mt2500 --single-branch https://github.com/zheshifandian/immortalwrt-mt798x
          cd immortalwrt-mt798x
          ./scripts/feeds update -a
-         cd immortalwrt-mt798x
          ./scripts/feeds install -a
 
      - name: config file
