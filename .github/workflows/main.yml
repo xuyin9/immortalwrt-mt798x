@@ -11,7 +11,7 @@ jobs:
 
      - name: 克隆镜像
        run: |
-         git clone -b mt2500 --single-branch https://github.com/zheshifandian/immortalwrt-mt798x
+         git clone --single-branch https://github.com/zheshifandian/immortalwrt-mt798x
          cd immortalwrt-mt798x
          ./scripts/feeds update -a
          ./scripts/feeds install -a
