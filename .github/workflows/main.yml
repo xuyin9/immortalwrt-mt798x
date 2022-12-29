@@ -20,7 +20,6 @@ jobs:
        run: |
         cd immortalwrt-mt798x
         cp -f defconfig/mt2500.config .config
-        cd immortalwrt-mt798x
          make menuconfig
 
      - name: Build
